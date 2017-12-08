@@ -52,7 +52,7 @@ public class RedisTest extends Assert {
         listOps.leftPush("AAA", "BBBB4");
         assertEquals("BBBB4", listOps.leftPop("AAA"));
 
-        System.out.println("  listOps.size(\"AAA\")>>>" + listOps.size("AAA"));
+        System.out.println("  listOps.size(\"AAA\")>>>" + listOps.size("AAA!!"));
         System.out.println("  listOps.size(\"AAA\")>>>" + listOps.size("AAA"));
 
 
