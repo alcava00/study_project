@@ -29,8 +29,6 @@ function showUsersThatReceivedAtLeastOneOfTheDeals(dealIds) { // 1
 }
 
 
-
-
 markDealAsSent('deal:1', 'user:1');
 markDealAsSent('deal:1', 'user:2');
 markDealAsSent('deal:2', 'user:1');
