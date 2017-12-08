@@ -49,7 +49,7 @@ public class TimeSeriesRepository implements InitializingBean{
             String key = getKey(nameSpace, granularities, timeStampSec);
             if (valueOperations.get(key) == null && granularities.getTtl() != 0) {
                 valueOperations.set(key, "1", granularities.getTtl(), TimeUnit.MILLISECONDS);
-            } else {
+            } else { //!!!!
                 valueOperations.increment(key, 1L);
             }
         }
