@@ -20,11 +20,11 @@ public class TimeSeriesRepositoryTest {
     public void insert() throws Exception {
         System.out.println("units.hour.msec:" + TimeSeries.units.hour.getMsec());
         repository.insert("buyItem");
-        long time=System.currentTimeMillis();
+//        long time=System.currentTimeMillis();
 //        for (int i = 0; i < 2000; i++) {
 //            repository.insert("buyItem");
 //        }
-        System.out.println("time:" +(System.currentTimeMillis()-time));
+//        System.out.println("time:" +(System.currentTimeMillis()-time));
     }
 
     @Test

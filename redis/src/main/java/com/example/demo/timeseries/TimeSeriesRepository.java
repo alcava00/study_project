@@ -47,8 +47,7 @@ public class TimeSeriesRepository implements InitializingBean{
     public void insert(String nameSpace, long timeStampSec) {
         for (TimeSeries.granularities granularities : TimeSeries.granularities.values()) {
             String key = getKey(nameSpace, granularities, timeStampSec);
-            System.out.println("keys:" +key);
-            if (valueOperations.get(key) == null && granularities.getDuration() != 0) {
+            if (valueOperations.get(key) == null && granularities.getTtl() != 0) {
                 valueOperations.set(key, "1", granularities.getTtl(), TimeUnit.MILLISECONDS);
             } else {
                 valueOperations.increment(key, 1L);
