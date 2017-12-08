@@ -10,7 +10,7 @@ var client = redis.createClient();
 
 //var dataType = process.argv[2]; // 2
 var dataType = "string"; // 2
-client.flushall(); // 3
+client.flushall();  
 
 var timeseries = require("./timeseries-" + dataType); // 4
 var item1Purchases = new timeseries.TimeSeries(client, "purchases:item1"); // 5
