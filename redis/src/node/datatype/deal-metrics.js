@@ -8,7 +8,7 @@ function markDealAsSent(dealId, userId) { // 1
 function sendDealIfNotSent(dealId, userId) { // 1
     client.sismember(dealId, userId, function (err, reply) { // 2
         if (reply) {
-            console.log("Deal !!!", dealId, "was already sent to user", userId); // 3
+            console.log("Deal !! !!!  ", dealId, "was already sent to user", userId); // 3
         } else {
             console.log("Sending", dealId, "to user", userId); // 4 // code to send the deal to the user would go here... // 5
             markDealAsSent(dealId, userId); // 6
